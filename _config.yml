@@ -1,1 +1,6 @@
-theme: jekyll-theme-minimal
+title: chiya.dev
+email: contact@chiya.dev
+baseurl: "/"
+url: "https://chiya.dev"
+github_username: chiyadev
+markdown: kramdown

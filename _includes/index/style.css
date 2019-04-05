@@ -1,0 +1,64 @@
+.parallax-bg {
+  position: fixed;
+  background-position: top;
+  background-size: cover;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  transform: scale(1.2);
+}
+
+.parallax-bg-blur {
+  filter: blur(14px);
+  transform: scale(1.2);
+  opacity: 0;
+}
+
+.shadow {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0) 100%);
+}
+
+#logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 4rem 1em 0 1em;
+  max-width: 32em;
+}
+
+#logo #chiya-logo {
+  width: 100%;
+  height: auto;
+}
+
+#logo #chiya-kan {
+  width: 20%;
+  height: auto;
+}
+
+#social {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2rem 2rem 0 0;
+}
+
+#social a {
+  color: white;
+  margin: 0.4em;
+  font-size: 1.5rem;
+  opacity: 0.5;
+}
+
+#spacing {
+  height: 95vh;
+}
