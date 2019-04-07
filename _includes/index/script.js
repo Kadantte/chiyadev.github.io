@@ -1,19 +1,20 @@
 "use strict";
 
-var bgUrls = [
-  "https://images7.alphacoders.com/789/789589.png",
-  "https://images8.alphacoders.com/789/789587.png",
-  "https://images7.alphacoders.com/752/752730.png",
-  "https://images8.alphacoders.com/796/796740.png",
-  "https://images6.alphacoders.com/790/790833.png",
-  "https://images5.alphacoders.com/752/752727.png",
-  "https://images8.alphacoders.com/795/795879.png"
-];
+var time = new Date().getHours();
+var bgUrl;
+
+if (time < 6)
+  bgUrl = "https://images8.alphacoders.com/796/796740.png";
+else if (time < 12)
+  bgUrl = "https://images8.alphacoders.com/789/789587.png";
+else if (time < 18)
+  bgUrl = "https://images7.alphacoders.com/789/789589.png";
+else
+  bgUrl = "https://images5.alphacoders.com/752/752727.png";
+console.log(time);
 
 $(document).ready(function () {
   $("#soc-discord").tooltip();
-
-  var bgUrl = bgUrls[Math.floor(Math.random() * bgUrls.length)];
 
   $(".parallax-bg").css("background-image", "url(" + bgUrl + ")");
   $(".parallax-bg.parallax-bg-blur").css("background-image", "url(" + bgUrl + ")");
