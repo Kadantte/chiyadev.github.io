@@ -11,15 +11,14 @@ else if (time < 18)
   bgUrl = "https://images7.alphacoders.com/789/789589.png";
 else
   bgUrl = "https://images5.alphacoders.com/752/752727.png";
-console.log(time);
 
 $(document).ready(function () {
   $("#soc-discord").tooltip();
 
-  $(".parallax-bg").css("background-image", "url(" + bgUrl + ")");
-  $(".parallax-bg.parallax-bg-blur").css("background-image", "url(" + bgUrl + ")");
+  $(".background").css("background-image", "url(" + bgUrl + ")");
+  $(".background.background-blurred").css("background-image", "url(" + bgUrl + ")");
 
-  var $parallaxBgBlur = $(".parallax-bg.parallax-bg-blur");
+  var backgroundBlurred = $(".background.background-blurred");
   var $shadow = $(".shadow");
 
   // parallax effect
@@ -27,7 +26,7 @@ $(document).ready(function () {
     var current = $(window).scrollTop();
     var opacity = Math.min(Math.max((current * 3) / $(window).height(), 0), 1);
 
-    $parallaxBgBlur.css("opacity", opacity);
+    backgroundBlurred.css("opacity", opacity);
     $shadow.css("opacity", 1 - opacity);
   }
   handleScroll();

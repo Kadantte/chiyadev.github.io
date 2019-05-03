@@ -1,4 +1,4 @@
-.parallax-bg {
+.background {
   position: fixed;
   background-position: center;
   background-size: cover;
@@ -10,7 +10,7 @@
   transform: scale(1.2);
 }
 
-.parallax-bg-blur {
+.background-blurred {
   filter: blur(14px);
   transform: scale(1.2);
   opacity: 0;
