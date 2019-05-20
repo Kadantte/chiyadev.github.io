@@ -30,14 +30,17 @@ style: index.css
     var time = new Date().getHours();
     var bgUrl;
 
-    if (time < 6)
-      bgUrl = "https://images8.alphacoders.com/796/796740.png";
-    else if (time < 12)
+    // 10pm to 6am
+    if (time >= 22 || time < 6)
       bgUrl = "https://images8.alphacoders.com/789/789587.png";
-    else if (time < 18)
-      bgUrl = "https://images7.alphacoders.com/789/789589.png";
-    else
+
+    // 6am to 2pm
+    else if (time < 14)
       bgUrl = "https://images5.alphacoders.com/752/752727.png";
+
+    // 2pm to 10pm
+    else if (time < 22)
+      bgUrl = "https://images7.alphacoders.com/789/789589.png";
 
     $("#soc-discord").tooltip();
 
