@@ -15,20 +15,19 @@ style: index.css
 </div>
 
 <div id="social">
-  <a href="https://github.com/chiyadev"><i class="fab fa-github"></i></a>
-  <a href="https://twitter.com/phosphene47"><i class="fab fa-twitter"></i></a>
-  <a href="https://twitch.tv/phosphene47"><i class="fab fa-twitch"></i></a>
-  <a href="https://discordapp.com/channels/@me" id="soc-discord" title="phosphene47#0001">
-    <i class="fab fa-discord"></i></a>
-  <a href="mailto:contact@chiya.dev"><i class="far fa-envelope"></i></a>
+  <a href="https://github.com/chiyadev" title="GitHub"><i class="fab fa-github"></i></a>
+  <a href="https://twitter.com/phosphene47" title="Twitter"><i class="fab fa-twitter"></i></a>
+  <a href="https://twitch.tv/phosphene47" title="Twitch"><i class="fab fa-twitch"></i></a>
+  <a href="https://discordapp.com/channels/@me" title="phosphene47#0001"><i class="fab fa-discord"></i></a>
+  <a href="mailto:contact@chiya.dev" title="Email"><i class="far fa-envelope"></i></a>
 </div>
 
 <script>
   "use strict";
 
-  window.addEventListener('DOMContentLoaded', function () {
-    // discord social button tooltip
-    $("#soc-discord").tooltip();
+  window.addEventListener("DOMContentLoaded", function () {
+    // enable tooltips
+    $("#social").children().tooltip();
 
     var time = new Date().getHours();
     var bgUrl;
