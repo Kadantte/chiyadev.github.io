@@ -30,8 +30,8 @@ $("<img/>").attr("src", bgUrl).on("load", function () {
   // fade in logo
   $("#logo")
     .on("load", function () {
-      $(this).delay(200).fadeIn();
-      $("#social").delay(200).fadeIn();
+      $(this).delay(300).fadeIn();
+      $("#social").delay(300).fadeIn();
     }).each(function () {
       if (this.complete)
         $(this).trigger("load");
