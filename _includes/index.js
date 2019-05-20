@@ -36,6 +36,7 @@ $("#logo")
   .attr("src", "/assets/images/chiya-logo.png")
   .on("load", function () {
     $(this).fadeIn();
+    $("#social").fadeIn();
   }).each(function () {
     if (this.complete)
       $(this).trigger("load");
@@ -44,7 +45,6 @@ $("#logo")
 // social media fading
 $("#social")
   .hide()
-  .fadeIn()
   .children().each(function () {
     $(this).hover(function () {
       $(this).stop(true).css("opacity", 1);
