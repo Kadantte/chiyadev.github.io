@@ -26,16 +26,29 @@ $("<img/>").attr("src", bgUrl).on("load", function () {
   $("#background")
     .hide()
     .css("background-image", "url(" + bgUrl + ")")
+    .delay(100)
     .fadeIn("slow");
 });
 
-var $shadow = $(".shadow");
+// load logo
+$("#logo")
+  .hide()
+  .attr("src", "/assets/images/chiya-logo.png")
+  .on("load", function () {
+    $(this).fadeIn();
+  }).each(function () {
+    if (this.complete)
+      $(this).trigger("load");
+  });
 
 // social media fading
-$("#social").children().each(function () {
-  $(this).hover(function () {
-    $(this).stop(true).css("opacity", 1);
-  }, function () {
-    $(this).stop(true).fadeTo("fast", 0.5);
+$("#social")
+  .hide()
+  .fadeIn()
+  .children().each(function () {
+    $(this).hover(function () {
+      $(this).stop(true).css("opacity", 1);
+    }, function () {
+      $(this).stop(true).fadeTo("fast", 0.5);
+    });
   });
-});
