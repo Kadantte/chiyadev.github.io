@@ -28,8 +28,8 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 1rem 2rem;
-  max-width: 30rem;
+  margin: 1rem 2rem;
+  max-width: 26rem;
   display: none;
 }
 
@@ -37,7 +37,7 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
-  padding: 2rem 3rem;
+  margin: 2rem 3rem;
   display: none;
 }
 
@@ -50,11 +50,11 @@ body {
 
 @media only screen and (max-width: 700px) {
   #logo {
-    padding: 3rem 1em;
-    max-width: 26rem;
+    margin: unset;
+    padding: 3.5rem 1em;
   }
 
   #social {
-    padding: 1rem;
+    margin: 1rem;
   }
 }
