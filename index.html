@@ -39,14 +39,7 @@ style: index.css
       bgUrl = "https://images7.alphacoders.com/789/789589.png";
 
     // set background image
-    $("#background")
-      .css("background-image", "url(" + bgUrl + ")")
-      .on("load", function () {
-        $(this).fadeIn();
-      }).each(function () {
-        if (this.complete)
-          $(this).trigger("load");
-      });
+    $("#background").css("background-image", "url(" + bgUrl + ")");
 
     var $shadow = $(".shadow");
 
