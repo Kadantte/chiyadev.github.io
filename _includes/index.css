@@ -7,13 +7,6 @@
   left: 0;
   right: 0;
   z-index: -1;
-  transform: scale(1.2);
-}
-
-.background-blurred {
-  filter: blur(14px);
-  transform: scale(1.2);
-  opacity: 0;
 }
 
 .shadow {
