@@ -11,6 +11,7 @@ body {
   left: 0;
   right: 0;
   z-index: -1;
+  display: none;
 }
 
 #shadow {
@@ -29,6 +30,7 @@ body {
   left: 0;
   padding: 1rem 2rem;
   max-width: 30rem;
+  display: none;
 }
 
 #social {
@@ -36,6 +38,7 @@ body {
   bottom: 0;
   right: 0;
   padding: 2rem 3rem;
+  display: none;
 }
 
 #social a {

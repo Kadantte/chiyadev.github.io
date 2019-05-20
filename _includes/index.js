@@ -24,7 +24,6 @@ $("<img/>").attr("src", bgUrl).on("load", function () {
 
   // set image
   $("#background")
-    .hide()
     .css("background-image", "url(" + bgUrl + ")")
     .delay(100)
     .fadeIn("slow");
@@ -32,7 +31,6 @@ $("<img/>").attr("src", bgUrl).on("load", function () {
 
 // load logo
 $("#logo")
-  .hide()
   .attr("src", "/assets/images/chiya-logo.png")
   .on("load", function () {
     $(this).fadeIn();
@@ -44,7 +42,6 @@ $("#logo")
 
 // social media fading
 $("#social")
-  .hide()
   .children().each(function () {
     $(this).hover(function () {
       $(this).stop(true).css("opacity", 1);
