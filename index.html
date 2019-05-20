@@ -27,6 +27,9 @@ style: index.css
   "use strict";
 
   window.addEventListener('DOMContentLoaded', function () {
+    // discord social button tooltip
+    $("#soc-discord").tooltip();
+
     var time = new Date().getHours();
     var bgUrl;
 
@@ -42,24 +45,10 @@ style: index.css
     else if (time < 22)
       bgUrl = "https://images7.alphacoders.com/789/789589.png";
 
-    $("#soc-discord").tooltip();
-
+    // set background image
     $(".background").css("background-image", "url(" + bgUrl + ")");
-    $(".background.background-blurred").css("background-image", "url(" + bgUrl + ")");
 
-    var backgroundBlurred = $(".background.background-blurred");
     var $shadow = $(".shadow");
-
-    // parallax effect
-    function handleScroll() {
-      var current = $(window).scrollTop();
-      var opacity = Math.min(Math.max((current * 3) / $(window).height(), 0), 1);
-
-      backgroundBlurred.css("opacity", opacity);
-      $shadow.css("opacity", 1 - opacity);
-    }
-    handleScroll();
-    $(window).scroll(handleScroll);
 
     // social media fading
     $("#social").children().each(function () {
