@@ -22,23 +22,25 @@ else if (time < 22)
 $("<img/>").attr("src", bgUrl).on("load", function () {
   $(this).remove();
 
-  // set image
+  // fade in background
   $("#background")
     .css("background-image", "url(" + bgUrl + ")")
-    .delay(100)
     .fadeIn("slow");
+
+  // fade in logo
+  $("#logo")
+    .on("load", function () {
+      $(this).delay(200).fadeIn();
+      $("#social").delay(200).fadeIn();
+    }).each(function () {
+      if (this.complete)
+        $(this).trigger("load");
+    });
 });
 
 // load logo
 $("#logo")
-  .attr("src", "/assets/images/chiya-logo.png")
-  .on("load", function () {
-    $(this).fadeIn();
-    $("#social").fadeIn();
-  }).each(function () {
-    if (this.complete)
-      $(this).trigger("load");
-  });
+  .attr("src", "/assets/images/chiya-logo.png");
 
 // social media fading
 $("#social")
