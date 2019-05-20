@@ -18,8 +18,16 @@ else if (time < 14)
 else if (time < 22)
   bgUrl = "https://images7.alphacoders.com/789/789589.png";
 
-// set background image
-$("#background").css("background-image", "url(" + bgUrl + ")");
+// load background image
+$("<img/>").attr("src", bgUrl).on("load", function () {
+  $(this).remove();
+
+  // set image
+  $("#background")
+    .hide()
+    .css("background-image", "url(" + bgUrl + ")")
+    .fadeIn("slow");
+});
 
 var $shadow = $(".shadow");
 
