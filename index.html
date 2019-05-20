@@ -3,13 +3,10 @@ layout: default
 style: index.css
 ---
 
-<div class="background"></div>
-<div class="shadow"></div>
+<div id="background"></div>
+<div id="shadow"></div>
 
-<div id="logo-container">
-  <img id="logo" alt="logo" src="/assets/images/chiya-logo.png" draggable="false" ondragstart="return false;">
-  <span>by phosphene47</span>
-</div>
+<img id="logo" alt="logo" src="/assets/images/chiya-logo.png" draggable="false" ondragstart="return false;">
 
 <div id="social">
   <a href="https://github.com/chiyadev" title="GitHub"><i class="fab fa-github"></i></a>
@@ -42,7 +39,14 @@ style: index.css
       bgUrl = "https://images7.alphacoders.com/789/789589.png";
 
     // set background image
-    $(".background").css("background-image", "url(" + bgUrl + ")");
+    $("#background")
+      .css("background-image", "url(" + bgUrl + ")")
+      .on("load", function () {
+        $(this).fadeIn();
+      }).each(function () {
+        if (this.complete)
+          $(this).trigger("load");
+      })
 
     var $shadow = $(".shadow");
 

@@ -1,5 +1,5 @@
-.background {
-  position: fixed;
+#background {
+  position: absolute;
   background-position: center;
   background-size: cover;
   top: 0;
@@ -9,8 +9,8 @@
   z-index: -1;
 }
 
-.shadow {
-  position: fixed;
+#shadow {
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
@@ -19,28 +19,19 @@
   background: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.8) 100%);
 }
 
-#logo-container {
+#logo {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 1rem 1rem;
-}
-
-#logo-container #logo {
-  max-width: 24rem;
-}
-
-@media only screen and (max-width: 40rem) {
-  #logo {
-    padding-bottom: 4rem;
-  }
+  padding: 1rem 2rem;
+  max-width: 28rem;
 }
 
 #social {
   position: absolute;
   bottom: 0;
   right: 0;
-  padding: 1.5rem;
+  padding: 2rem 3rem;
 }
 
 #social a {
@@ -48,4 +39,14 @@
   margin: 0.5rem;
   font-size: 1.5rem;
   opacity: 0.5;
+}
+
+@media only screen and (max-width: 42rem) {
+  #logo {
+    padding: 2.5rem 1em;
+  }
+
+  #social {
+    padding: 1rem;
+  }
 }
