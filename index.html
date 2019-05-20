@@ -18,7 +18,7 @@ style: index.css
   <a href="https://github.com/chiyadev"><i class="fab fa-github"></i></a>
   <a href="https://twitter.com/phosphene47"><i class="fab fa-twitter"></i></a>
   <a href="https://twitch.tv/phosphene47"><i class="fab fa-twitch"></i></a>
-  <a href="https://discordapp.com/channels/@me" id="soc-discord" title="phosphene47#7788">
+  <a href="https://discordapp.com/channels/@me" id="soc-discord" title="phosphene47#0001">
     <i class="fab fa-discord"></i></a>
   <a href="mailto:contact@chiya.dev"><i class="far fa-envelope"></i></a>
 </div>
@@ -87,33 +87,31 @@ style: index.css
     else
       bgUrl = "https://images5.alphacoders.com/752/752727.png";
 
-    $(document).ready(function () {
-      $("#soc-discord").tooltip();
+    $("#soc-discord").tooltip();
 
-      $(".background").css("background-image", "url(" + bgUrl + ")");
-      $(".background.background-blurred").css("background-image", "url(" + bgUrl + ")");
+    $(".background").css("background-image", "url(" + bgUrl + ")");
+    $(".background.background-blurred").css("background-image", "url(" + bgUrl + ")");
 
-      var backgroundBlurred = $(".background.background-blurred");
-      var $shadow = $(".shadow");
+    var backgroundBlurred = $(".background.background-blurred");
+    var $shadow = $(".shadow");
 
-      // parallax effect
-      function handleScroll() {
-        var current = $(window).scrollTop();
-        var opacity = Math.min(Math.max((current * 3) / $(window).height(), 0), 1);
+    // parallax effect
+    function handleScroll() {
+      var current = $(window).scrollTop();
+      var opacity = Math.min(Math.max((current * 3) / $(window).height(), 0), 1);
 
-        backgroundBlurred.css("opacity", opacity);
-        $shadow.css("opacity", 1 - opacity);
-      }
-      handleScroll();
-      $(window).scroll(handleScroll);
+      backgroundBlurred.css("opacity", opacity);
+      $shadow.css("opacity", 1 - opacity);
+    }
+    handleScroll();
+    $(window).scroll(handleScroll);
 
-      // social media fading
-      $("#social").children().each(function () {
-        $(this).hover(function () {
-          $(this).stop(true).css("opacity", 1);
-        }, function () {
-          $(this).stop(true).fadeTo("fast", 0.5);
-        });
+    // social media fading
+    $("#social").children().each(function () {
+      $(this).hover(function () {
+        $(this).stop(true).css("opacity", 1);
+      }, function () {
+        $(this).stop(true).fadeTo("fast", 0.5);
       });
     });
   });
