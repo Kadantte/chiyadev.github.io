@@ -44,7 +44,7 @@ $("#logo")
 
 // social media fading
 $("#social")
-  .children().each(function () {
+  .children("a").each(function () {
     $(this).hover(function () {
       $(this).stop(true).css("opacity", 1);
     }, function () {
